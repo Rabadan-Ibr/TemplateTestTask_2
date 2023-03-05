@@ -1,0 +1,7 @@
+{% if obj.named_url %}
+    <a href="{% url obj.named_url %}">
+{% else %}
+    <a href="{{ obj.url }}">
+{% endif %}
+    {{ obj.name }}
+</a>
