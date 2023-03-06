@@ -34,6 +34,7 @@ def create_menu(obj, path, current_point):
 
 @register.simple_tag(takes_context=True)
 def draw_menu(context, menu_title):
+
     try:
         head = HeadMenu.objects.get(title=menu_title)
     except HeadMenu.DoesNotExist:
